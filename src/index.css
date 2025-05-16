@@ -241,6 +241,11 @@ hr {
 
 /* cart ------*/
 
+.cart-bg {
+    width: 100%;
+    overflow: hidden;
+}
+
 .cart-items-list {
     height: 87vh;
     overflow: scroll;
@@ -258,7 +263,7 @@ hr {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: #f5f7fa;
+    background-color: #ff5200;
 }
 
 .login-form {
@@ -268,6 +273,7 @@ hr {
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
     width: 100%;
     max-width: 400px;
+    position: relative;
 }
 
 .login-form h2 {
@@ -305,4 +311,20 @@ hr {
 
 .login-form button:hover {
     background-color: #357ab8;
+}
+
+.login-img-left {
+    height: 450px !important;
+    width: 250px !important;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.login-img-right {
+    height: 450px !important;
+    width: 250px !important;
+    position: absolute;
+    right: 0;
+    top: 0;
 }

@@ -7,7 +7,7 @@ import { VegsURL } from "../utils/Constants";
 import { BeveragesURL } from "../utils/Constants";
 import { Link } from "react-router-dom";
 import useOnlineStatus from "./useOnlineStatus";
-
+import internetimg from "../img/internet.jpg"
 export const Body = () => {
     let [orgRestaurantlist, setorgRestaurantlist]=useState([]);
    let [Restaurantlist, setRestaurantlist]=useState([]);
@@ -38,9 +38,11 @@ let beveragesApi=async()=>{
     setRestaurantlist(data3.data.cards[0].groupedCard.cardGroupMap.RESTAURANT.cards);  
 }
 if(statuscode===false){
-    return <div>
+    return <div className="h-full">
         
-        <h1>Check your internet Connection</h1>
+        <div className="my-5 flex align-content-center justify-content-center">
+            <img src={internetimg} alt="" className="w-120" />
+        </div>
     </div>
    
 }

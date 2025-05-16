@@ -12,7 +12,10 @@ const LoginFrom=()=>{
     }
   
     return(
-        <div className="login-container">
+        <div className="login-container flex align-items-center">
+            <div className="">
+                <img src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto/portal/testing/seo-home/Veggies_new.png" className="login-img-left"></img>
+            </div>
             <div className="login-form">
             <h2 className="my-3">Login Details</h2>
 
@@ -36,11 +39,13 @@ const LoginFrom=()=>{
                 </input>
                </div>
                
-               <Link to="/cart">
+               <Link to="/">
                <button className="btn btn-success my-2" onClick={adduserid} >Submit</button>
                </Link>
             </div>
-
+            <div className="">
+                <img src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto/portal/testing/seo-home/Sushi_replace.png" className="login-img-right"></img>
+            </div>
         </div>
     )
 }
