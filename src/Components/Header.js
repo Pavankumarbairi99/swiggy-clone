@@ -1,9 +1,9 @@
-import { useState, useContext } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import {  useContext } from "react";
+import { Link } from "react-router-dom";
 import useOnlineStatus from "./useOnlineStatus";
 import userContext from "../utils/userContext";
 import { useSelector } from "react-redux";
-
+import logo from "../img/logo.png"
 
 
 const Header = () => {
@@ -15,8 +15,9 @@ const Header = () => {
 
 
     <div>
- <img src="https://res.cloudinary.com/dvubvku3b/image/upload/v1744138447/image_3_t9uvu4.png" alt="logo" className="nav-logo-img"></img>
-     
+        <Link to="/">
+          <img src={logo} alt="logo" className="nav-logo-img"></img>
+        </Link>
     </div>
    <div className="nav-menu ">
     <ul>

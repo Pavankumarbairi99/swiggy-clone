@@ -314,6 +314,7 @@ hr {
 }
 
 .login-img-left {
+    margin-top: 70px;
     height: 450px !important;
     width: 250px !important;
     position: absolute;
@@ -322,6 +323,7 @@ hr {
 }
 
 .login-img-right {
+    margin-top: 50px;
     height: 450px !important;
     width: 250px !important;
     position: absolute;

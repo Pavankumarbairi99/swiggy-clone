@@ -22,6 +22,7 @@ useEffect(()=>{
 let apicalls=async()=>{
     let datafetch = await fetch(BriyaniURL)
     let data1 = await datafetch.json()
+    console.log(data1)
     setorgRestaurantlist(data1.data.cards[0].groupedCard.cardGroupMap.RESTAURANT.cards);
     setRestaurantlist(data1.data.cards[0].groupedCard.cardGroupMap.RESTAURANT.cards);
 }

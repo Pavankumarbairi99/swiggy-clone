@@ -3,9 +3,8 @@ import './index.css';
 import reportWebVitals from './reportWebVitals';
 import React from "react";
 import Header from "./Components/Header";
-import { Body } from "./Components/Bodycard";
+
 import { createBrowserRouter, RouterProvider, Outlet} from "react-router-dom";
-import Contact from "./Components/Contact";
 import Error from "./Components/Error";
 import RestaurantMenu from "./Components/RestaurantMenu";
 import { lazy,Suspense} from "react";
@@ -15,12 +14,13 @@ import appStore from "./utils/appStore";
 import CartItems from "./Components/Cart";
 import { useState } from "react";
 import LoginFrom from "./Components/loginForm";
+import {Body} from "./Components/Bodycard";
 
+const root = ReactDOM.createRoot(document.getElementById('root1'));
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const About= lazy(()=>import("./Components/About"))
+const Contact = lazy(()=>import("./Components/Contact"))
 
-
-let About=lazy(()=>import("./Components/About"))
 const Appjs=()=>{
     let[logIn,setlogIn]=useState("")
  return( 
@@ -41,7 +41,8 @@ let routerelements = createBrowserRouter([
         children:[
             {
                 path:"/",
-                element:<Body />,
+                element:
+                   <Body />,
             },
             {
                 path:"/about",
@@ -53,7 +54,11 @@ let routerelements = createBrowserRouter([
             },
             {
                 path:"/contact",
-                element:<Contact />,
+                
+                element:
+                <Suspense fallback={<h1 className='my-5 text-center text-lg'>Loading...!</h1>}>             
+                   <Contact />
+                   </Suspense>,
             },
             {
                 path:"/cart",

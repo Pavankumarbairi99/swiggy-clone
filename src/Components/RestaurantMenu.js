@@ -5,6 +5,8 @@ import { useParams } from "react-router-dom";
 import RestMenuList from "./RestMenuList"
 import useOnlineStatus from "./useOnlineStatus";
 import LoadingMenu from "./loadingMenu";
+import internetimg from "../img/internet.jpg"
+
 let RestaurantMenu=()=>{
     let [orgMenulist,setorgMenulist]=useState([]);
     let [singmenulist,setsingmenulist]=useState([]);
@@ -26,9 +28,11 @@ let restmenulistapi=async()=>{
 
 }
 if(statuscode===false){
-    return <div>
+    return <div className="h-full">
         
-        <h1>Check your internet Connection</h1>
+        <div className="my-5 flex align-content-center justify-content-center">
+            <img src={internetimg} alt="" className="w-120" />
+        </div>
     </div>
    
 }
